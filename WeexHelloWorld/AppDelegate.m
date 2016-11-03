@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "AppDelegate+Weex.h"
+#import "ViewController.h"
+#import <WeexSDK/WXBaseViewController.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[WXBaseViewController alloc] initWithSourceURL:[NSURL URLWithString:@"http://localhost:8081/main.js"]]];
+    [self.window makeKeyAndVisible];
+    [self initWeexSDK];
     return YES;
 }
 

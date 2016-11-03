@@ -2,6 +2,7 @@
   <div class="ct" style="height: {{ctHeight}}">
     <image class="img" style="width: 400px; height: 400px;" src="{{img}}"></image>
     <text style="font-size: 42;">Hello Weex!</text>
+    <text style="font-size: 42;">Hello World!</text>
   </div>
 </template>
 

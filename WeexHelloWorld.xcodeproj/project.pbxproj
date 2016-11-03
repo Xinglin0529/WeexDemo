@@ -13,6 +13,8 @@
 		AA749F691DC995620077B650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA749F671DC995620077B650 /* Main.storyboard */; };
 		AA749F6B1DC995620077B650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA749F6A1DC995620077B650 /* Assets.xcassets */; };
 		AA749F6E1DC995620077B650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA749F6C1DC995620077B650 /* LaunchScreen.storyboard */; };
+		AAE5FE821DC9B4FB00CA1F19 /* AppDelegate+Weex.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE5FE811DC9B4FB00CA1F19 /* AppDelegate+Weex.m */; };
+		AAE5FE851DC9B71600CA1F19 /* WXImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE5FE841DC9B71600CA1F19 /* WXImageDownloader.m */; };
 		C4F8F7A330E6D48EC8696146 /* Pods_WeexHelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62891025A6CD45FEDBD93EE5 /* Pods_WeexHelloWorld.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,10 @@
 		AA749F6A1DC995620077B650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA749F6D1DC995620077B650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA749F6F1DC995620077B650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAE5FE801DC9B4FB00CA1F19 /* AppDelegate+Weex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Weex.h"; sourceTree = "<group>"; };
+		AAE5FE811DC9B4FB00CA1F19 /* AppDelegate+Weex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Weex.m"; sourceTree = "<group>"; };
+		AAE5FE831DC9B71600CA1F19 /* WXImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXImageDownloader.h; sourceTree = "<group>"; };
+		AAE5FE841DC9B71600CA1F19 /* WXImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXImageDownloader.m; sourceTree = "<group>"; };
 		F539AF406F0ED136333627A6 /* Pods-WeexHelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexHelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeexHelloWorld/Pods-WeexHelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +80,12 @@
 		AA749F5D1DC995620077B650 /* WeexHelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				AAE5FE831DC9B71600CA1F19 /* WXImageDownloader.h */,
+				AAE5FE841DC9B71600CA1F19 /* WXImageDownloader.m */,
 				AA749F611DC995620077B650 /* AppDelegate.h */,
 				AA749F621DC995620077B650 /* AppDelegate.m */,
+				AAE5FE801DC9B4FB00CA1F19 /* AppDelegate+Weex.h */,
+				AAE5FE811DC9B4FB00CA1F19 /* AppDelegate+Weex.m */,
 				AA749F641DC995620077B650 /* ViewController.h */,
 				AA749F651DC995620077B650 /* ViewController.m */,
 				AA749F671DC995620077B650 /* Main.storyboard */,
@@ -226,9 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE5FE851DC9B71600CA1F19 /* WXImageDownloader.m in Sources */,
 				AA749F661DC995620077B650 /* ViewController.m in Sources */,
 				AA749F631DC995620077B650 /* AppDelegate.m in Sources */,
 				AA749F601DC995620077B650 /* main.m in Sources */,
+				AAE5FE821DC9B4FB00CA1F19 /* AppDelegate+Weex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
