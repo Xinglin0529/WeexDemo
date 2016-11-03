@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <WeexSDK/WXSDKInstance.h>
+#import "HeaderDefine.h"
 
 @interface ViewController ()
 
@@ -21,13 +22,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     if (!self.url) {
-        self.url = [NSURL URLWithString:@"http://localhost:8081/main.js"];
+        self.url = HOME_URL;
     }
     
     if (!self.url) {
         return;
     }
+    
+    NSURL *URL = [NSURL URLWithString:self.url];
     
     [_instance destroyInstance];
     _instance = [[WXSDKInstance alloc] init];
@@ -48,7 +52,8 @@
     _instance.updateFinish = ^(UIView *view){
         
     };
-    [_instance renderWithURL:self.url options:@{@"bundleUrl":self.url.absoluteString} data:nil];
+    NSString *randomURL = [NSString stringWithFormat:@"%@?random=%d",URL.absoluteString,arc4random()];
+    [_instance renderWithURL:[NSURL URLWithString:randomURL] options:@{@"bundleUrl":URL.absoluteString} data:nil];
 }
 
 - (void)dealloc

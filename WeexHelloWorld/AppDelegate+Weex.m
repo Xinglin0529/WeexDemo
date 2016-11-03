@@ -12,7 +12,7 @@
 #import <WeexSDK/WXSDKManager.h>
 #import <WeexSDK/WXAppConfiguration.h>
 #import <WeexSDK/WXLog.h>
-
+#import "WXEventModule.h"
 #import "WXImageDownloader.h"
 
 @implementation AppDelegate (Weex)
@@ -24,7 +24,7 @@
     [WXAppConfiguration setAppVersion:@"1.0.0"];
     
     [WXSDKEngine registerHandler:[WXImageDownloader new] withProtocol:@protocol(WXImgLoaderProtocol)];
-
+    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
     //init sdk enviroment
     [WXSDKEngine initSDKEnviroment];
     
